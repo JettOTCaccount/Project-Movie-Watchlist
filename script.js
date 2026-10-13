@@ -8,12 +8,10 @@ const emptyMessage = document.getElementById("empty-message");
 const watchlist = {
 movies: [],
 toggleWatched(index) {
-    const watchlist = {
-    movies: [{ title: "The Princess Bride", genre: "Adventure", watched: false }],
-
+    this.movies[index].watched = !this.movies[index].watched;
 },
 removeMovie(index) {
-    // TODO (Step 4)
+    this.movies.splice(index, 1);
 }
 };
 
@@ -66,7 +64,25 @@ function renderMovies() {
 }
 
 form.addEventListener("submit", (event) => {
-// TODO (Step 5)
+  event.preventDefault();
+
+  const title = titleInput.value.trim();
+  const genre = genreSelect.value;
+
+  if (title === "") {
+    message.textContent = "enter a movie title.";
+    return;
+  }
+  if (genre === "") {
+    message.textContent = "choose one of the genres.";
+    return;
+  }
+
+  watchlist.movies.push({ title: title, genre: genre, watched: false });
+  saveMovies();
+  renderMovies();
+  message.textContent = "";
+  titleInput.value = "";
 });
 
 loadMovies();

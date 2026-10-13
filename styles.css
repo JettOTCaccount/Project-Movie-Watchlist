@@ -1,0 +1,14 @@
+body {
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+form {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+
