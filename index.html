@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Movie Watchlist</title>
 	<link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-	<!--Jett Brayman FA-CIS-131-W01 Movie Watchlist 10/12/26-->
+	<script src="script.js" defer></script>
+	<!-- FA-CIS-131-W01 Movie Watchlist 10/12/26-->
 </head>
 
 <body>
@@ -15,24 +15,27 @@
 		<h1>Movie Watchlist</h1>
 	</header>
 	<main>
-        <form id="movie-form">
-            <label for="movie-title">Title</label>
-            <input type="text" id="movie-title">
+		<form id="movie-form">
+			<label for="movie-title">Title</label>
+			<input type="text" id="movie-title">
 
-            <label for="movie-genre">genre</label>
+			<label for="movie-genre">genre</label>
 
-            <select id="movie-genre">
-                <option value="">choose a genre</option>
-                <option value="action">action</option>
-                <option value="adventure">adventure</option>
-                <option value="comedy">comedy</option>
-                <option value="drama">drama</option>
-                <option value="horror">horror</option>
-                <option value="sci-fi">sci-fi</option>
-                <option value="animation">animation</option>
-            </select>
-            <button type="submit">add movie</button>
-        </form>
+			<select id="movie-genre">
+				<option value="">choose a genre</option>
+				<option value="action">action</option>
+				<option value="adventure">adventure</option>
+				<option value="comedy">comedy</option>
+				<option value="drama">drama</option>
+				<option value="horror">horror</option>
+				<option value="sci-fi">sci-fi</option>
+				<option value="animation">animation</option>
+			</select>
+			<button type="submit">add movie</button>
+		</form>
+		<p id="form-message"></p>
+		<ul id="movie-list"></ul>
+		<p id="empty-message"></p>
 	</main>
 </body>
 
